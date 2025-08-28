@@ -12,9 +12,9 @@ const Dashboardlayout: FC<Ichildren> = ({ children, news }) => {
         <h1>{news}</h1>
     </div>
       <div className='flex'>
-        <aside className='w-52 bg-white '>
-          <h1 className='text-black'>mune Dashboard</h1>
-          <ul className='underline' >
+        <aside className='w-52  '>
+          <h1 className=''>mune Dashboard</h1>
+          <ul className='underline ' >
             <li>
               <Link href={'/dashboard'} >
                 dashboar
@@ -28,6 +28,16 @@ const Dashboardlayout: FC<Ichildren> = ({ children, news }) => {
             <li>
               <Link href={'/dashboard/setting'} >
                 setting
+              </Link>
+            </li>
+            <li>
+              <Link href={'/about'} >
+                about
+              </Link>
+            </li>
+             <li>
+              <Link href={'/'} >
+                home
               </Link>
             </li>
           </ul>
