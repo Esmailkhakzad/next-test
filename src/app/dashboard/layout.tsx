@@ -10,7 +10,7 @@ const Dashboardlayout: FC<Ichildren> = ({ children, news, corsrs }) => {
   return (
     <>
       <div className='flex p-8'>
-        <aside className='w-52  '>
+        <aside className='w-40  '>
           <ul className='underline '>
             <li>
               <Link href={'/dashboard'}>dashboar</Link>
