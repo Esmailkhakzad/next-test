@@ -29,18 +29,7 @@ export default function RootLayout ({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className='w-full h-20 text-center   bg-red-700'>
-          <ul className='flex justify-center gap-10 pt-8  '>
-            <li>
-              <Link href={'/about'} className='text-xl hover:text-black'>
-                about
-              </Link>
-            </li>
-            <li>
-              <Link href={'/dashboard'} className='text-xl hover:text-black'>
-                {' '}
-                dashboard
-              </Link>
-            </li>
+          <ul className='flex justify-end gap-10 pt-8 pr-8  '>
             <li>
               <Link href={'/'} className='text-xl hover:text-black'>
                 home
@@ -49,7 +38,7 @@ export default function RootLayout ({
           </ul>
         </header>
         {children}
-        <footer className='w-full h-20 text-center bg-red-700 fixed bottom-0'>
+        <footer className='w-full h-20 text-center bg-red-700 pt-8 fixed bottom-0'>
           بخش فوتر
         </footer>
       </body>
