@@ -1,4 +1,3 @@
-// hooks/useTasks.ts
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export interface DescriptionItem {
@@ -10,7 +9,6 @@ export interface Task {
   id: string;
   title: string;
   time: string;
-  status: boolean;
   description: DescriptionItem[];
 }
 
@@ -47,8 +45,8 @@ export const useCreateTask = () => {
       return response.json();
     },
     onSuccess: () => {
-      // Invalidate and refetch
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
     },
   });
 };
+

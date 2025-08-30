@@ -79,7 +79,7 @@ const AddPage = () => {
           ایجاد تسک جدید
         </h1>
         <div className='mb-6'>
-          <label className='block text-sm font-medium text-gray-700 mb-2'>
+          <label className='block text-sm font-medium text-black mb-2'>
             عنوان تسک
           </label>
           <input
@@ -92,8 +92,8 @@ const AddPage = () => {
           />
         </div>
         <div className='mb-6'>
-          <label className='block text-sm  font-medium text-gray-700 mb-2'>
-            توضیحات (با Enter اضافه کنید)
+          <label className='block text-sm  font-medium text-black mb-2'>
+            توضیحات 
           </label>
           <input
             type='text'
@@ -101,7 +101,7 @@ const AddPage = () => {
             onChange={e => setDescriptionInput(e.target.value)}
             onKeyPress={handleKeyPress}
             className='w-full px-3 py-2 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#008B8B] mb-2'
-            placeholder='توضیح را وارد و Enter بزنید...'
+            placeholder='توضیح را وارد و  ...'
             disabled={createTaskMutation.isPending}
           />
           <div className='space-y-2'>
@@ -122,20 +122,6 @@ const AddPage = () => {
             ))}
           </div>
         </div>
-        <div className='mb-6'>
-          <label className='flex items-center'>
-            <input
-              type='checkbox'
-              checked={isActive}
-              onChange={e => setIsActive(e.target.checked)}
-              className='w-4 h-4 text-[#008B8B] focus:ring-[#008B8B] border-gray-300 rounded'
-              disabled={createTaskMutation.isPending}
-            />
-            <span className='mr-2 text-sm font-medium text-gray-700'>
-              وضعیت فعال
-            </span>
-          </label>
-        </div>
         <button
           onClick={handleSubmit}
           disabled={createTaskMutation.isPending}
@@ -145,7 +131,7 @@ const AddPage = () => {
         </button>
         <button
           onClick={() => router.push('/')}
-          className='w-full mt-4 bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500'
+          className='w-full mt-4 bg-black text-[#008B8B] py-2 px-4 rounded-md hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500'
         >
           بازگشت به صفحه اصلی
         </button>
