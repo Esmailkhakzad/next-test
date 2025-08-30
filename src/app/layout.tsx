@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import { FiPlus } from 'react-icons/fi'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,19 +29,27 @@ export default function RootLayout ({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className='w-full h-20 text-center   bg-red-700'>
-          <ul className='flex justify-end gap-10 pt-8 pr-8  '>
+        <header className='w-full h-20 text-center   bg-red-700 '>
+          <ul className='flex justify-between p-6   '>
             <li>
-              <Link href={'/'} className='text-xl hover:text-black'>
-                home
+              <h1 className='text-[60px] pt-2 font-bold bg-gradient-to-b from-black from-45% via-red-700 via-70% to-red-700 to-90% bg-clip-text text-transparent'>
+                NOTES
+              </h1>
+            </li>
+            <li>
+              <Link
+                href='/add'
+                className='flex items-center justify-center -mt-2 w-[50px] h-[50px] bg-black rounded-full hover:bg-red-700 transition-all duration-300 group'
+              >
+                <FiPlus
+                  size={30}
+                  className='text-red-700 group-hover:text-white transition-colors duration-300'
+                />
               </Link>
             </li>
           </ul>
         </header>
         {children}
-        <footer className='w-full h-20 text-center bg-red-700 pt-8 fixed bottom-0'>
-          بخش فوتر
-        </footer>
       </body>
     </html>
   )
