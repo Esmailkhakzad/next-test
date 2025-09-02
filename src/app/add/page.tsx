@@ -40,12 +40,12 @@ const AddPage = () => {
 
   const handleSubmit = async () => {
     if (!title.trim()) {
-      toast.error('لطفا عنوان را وارد کنید')
+      toast.error(' عنوان را وارد کنید')
       return
     }
 
     if (descriptions.length === 0) {
-      toast.error('لطفا حداقل یک توضیح اضافه کنید')
+      toast.error('  یک توضیح اضافه کنید')
       return
     }
 
